@@ -22,13 +22,13 @@ import io.flutter.plugin.common.MethodChannel;
 
 public class YandexSearchListener implements Session.SearchListener {
 
-  private MethodChannel.Result  result;
-  private int                   page;
+  private MethodChannel.Result 	result;
+  private int 									page;
 
   YandexSearchListener(MethodChannel.Result result, int page) {
 
     this.result = result;
-    this.page   = page;
+    this.page 	= page;
   }
 
   @Override
@@ -66,34 +66,34 @@ public class YandexSearchListener implements Session.SearchListener {
 
         if (geometryItem.getPoint() != null) {
           geometry.add(
-            new HashMap<String,Object>() {{
-              put(
-                "point",
-                new HashMap<String, Object>() {{
-                  put("latitude", geometryItem.getPoint().getLatitude());
-                  put("longitude", geometryItem.getPoint().getLongitude());
-                }}
-              );
-            }}
+                  new HashMap<String,Object>() {{
+                    put(
+                            "point",
+                            new HashMap<String, Object>() {{
+                              put("latitude", geometryItem.getPoint().getLatitude());
+                              put("longitude", geometryItem.getPoint().getLongitude());
+                            }}
+                    );
+                  }}
           );
         }
 
         if (geometryItem.getBoundingBox() != null) {
           geometry.add(
-            new HashMap<String,Object>() {{
-              put("boundingBox",
-                new HashMap<String, Object>() {{
-                  put("southWest", new HashMap<String, Object>() {{
-                    put("latitude", geometryItem.getBoundingBox().getSouthWest().getLatitude());
-                    put("longitude", geometryItem.getBoundingBox().getSouthWest().getLongitude());
-                  }});
-                  put("northEast", new HashMap<String, Object>() {{
-                    put("latitude", geometryItem.getBoundingBox().getNorthEast().getLatitude());
-                    put("longitude", geometryItem.getBoundingBox().getNorthEast().getLongitude());
-                  }});
-                }}
-              );
-            }}
+                  new HashMap<String,Object>() {{
+                    put("boundingBox",
+                            new HashMap<String, Object>() {{
+                              put("southWest", new HashMap<String, Object>() {{
+                                put("latitude", geometryItem.getBoundingBox().getSouthWest().getLatitude());
+                                put("longitude", geometryItem.getBoundingBox().getSouthWest().getLongitude());
+                              }});
+                              put("northEast", new HashMap<String, Object>() {{
+                                put("latitude", geometryItem.getBoundingBox().getNorthEast().getLatitude());
+                                put("longitude", geometryItem.getBoundingBox().getNorthEast().getLongitude());
+                              }});
+                            }}
+                    );
+                  }}
           );
         }
       }
@@ -198,54 +198,55 @@ public class YandexSearchListener implements Session.SearchListener {
             flutterKind = 0;
             break;
           case COUNTRY:
-            flutterKind = 2;
+            flutterKind = 1;
             break;
           case REGION:
-            flutterKind = 3;
+            flutterKind = 2;
             break;
           case PROVINCE:
-            flutterKind = 4;
+            flutterKind = 3;
             break;
           case AREA:
-            flutterKind = 5;
+            flutterKind = 4;
             break;
           case LOCALITY:
-            flutterKind = 6;
+            flutterKind = 5;
             break;
           case DISTRICT:
-            flutterKind = 7;
+            flutterKind = 6;
             break;
           case STREET:
-            flutterKind = 8;
+            flutterKind = 7;
             break;
           case HOUSE:
-            flutterKind = 9;
+            flutterKind = 8;
             break;
           case ENTRANCE:
-            flutterKind = 10;
+            flutterKind = 9;
             break;
           case ROUTE:
-            flutterKind = 11;
+            flutterKind = 10;
             break;
           case STATION:
-            flutterKind = 12;
+            flutterKind = 11;
             break;
           case METRO_STATION:
-            flutterKind = 13;
+            flutterKind = 12;
             break;
           case RAILWAY_STATION:
-            flutterKind = 14;
+            flutterKind = 13;
             break;
           case VEGETATION:
-            flutterKind = 15;
+            flutterKind = 14;
             break;
           case HYDRO:
-            flutterKind = 16;
+            flutterKind = 15;
             break;
           case AIRPORT:
-            flutterKind = 17;
+            flutterKind = 16;
             break;
           case OTHER:
+            flutterKind = 17;
             break;
         }
 
