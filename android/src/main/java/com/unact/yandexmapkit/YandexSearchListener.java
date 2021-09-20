@@ -22,13 +22,13 @@ import io.flutter.plugin.common.MethodChannel;
 
 public class YandexSearchListener implements Session.SearchListener {
 
-  private MethodChannel.Result  result;
-  private int                   page;
+  private MethodChannel.Result 	result;
+  private int 									page;
 
   YandexSearchListener(MethodChannel.Result result, int page) {
 
     this.result = result;
-    this.page   = page;
+    this.page 	= page;
   }
 
   @Override
