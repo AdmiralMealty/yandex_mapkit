@@ -1036,10 +1036,6 @@ public class YandexMapController: NSObject, FlutterPlatformView {
       view.pin.setIconWith(
         UIImage(named: pluginRegistrar.lookupKey(forAsset: self.iconName))!
       )
-        do{
-            try view.accuracyCircle.fillColor = accuracyCircleFillColor
-            
-        }
         view.arrow.setIconWith(
             UIImage(named: pluginRegistrar.lookupKey(forAsset: self.arrowName))!
       )
