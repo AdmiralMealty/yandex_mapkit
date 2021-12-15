@@ -1036,8 +1036,8 @@ public class YandexMapController: NSObject, FlutterPlatformView {
       view.pin.setIconWith(
         UIImage(named: pluginRegistrar.lookupKey(forAsset: self.iconName))!
       )
-        view.arrow.setIconWith(
-            UIImage(named: pluginRegistrar.lookupKey(forAsset: self.arrowName))!
+      view.arrow.setIconWith(
+        UIImage(named: pluginRegistrar.lookupKey(forAsset: self.arrowName))!
       )
       if (userArrowOrientation) {
         view.arrow.setIconStyleWith(
@@ -1052,7 +1052,8 @@ public class YandexMapController: NSObject, FlutterPlatformView {
           )
         )
       }
-        }
+      view.accuracyCircle.fillColor = accuracyCircleFillColor
+    }
 
     func onObjectRemoved(with view: YMKUserLocationView) {}
 
